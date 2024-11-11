@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qamisi Support</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: #1d2031;
+        color: #fff;
+      }
+      h2 {
+        color: #dbd9ff;
+        margin-top: 30px;
+      }
+      p {
+        margin-top: 20px;
+        line-height: 150%;
+      }
+      li {
+        margin-top: 20px;
+        line-height: 150%;
+      }
+      label {
+        display: block;
+        margin: 15px 0 5px;
+      }
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+
+      #app_logo {
+        background-image: url("images/256.png");
+        background-repeat: no-repeat;
+        width: 256px;
+        height: 256px;
+        margin: auto;
+      }
+
+      .confirmation-message {
+        display: none;
+        margin-top: 20px;
+        color: #a9efab;
+        font-weight: bold;
+      }
+
+      .confirmation-message a:link {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Qamisi</h1>
+    <div id="app_logo"></div>
+    <!-- About -->
+    <h2>About</h2>
+
+    <p>Welcome to Qamisi, the ultimate fashion catalog app designed to organize, plan, and inspire your wardrobe.</p>
+
+    <p>
+      With Qamisi, you can easily catalog your garments, dresses, and shoes, pairing each item with photos, and marking items you’d love to buy. From building
+      personalized outfits to curating versatile fashion capsules for travel, Qamisi is the smart, stylish way to manage your wardrobe and streamline your
+      style.
+    </p>
+
+    <ul>
+      <li><b>Catalog Your Closet:</b> Add and categorize your wardrobe items, attach images, and log key details.</li>
+      <li><b>Wish List:</b> Mark items as "to-buy" to keep track of your fashion finds and wishlist.</li>
+      <li><b>Outfit Builder:</b> Arrange pieces into custom outfits and find new ways to style what you own.</li>
+      <li><b>Capsule Collections:</b> Curate fashion capsules to simplify packing for trips or organizing seasonal looks.</li>
+      <li><b>iCloud Sync:</b> Seamlessly sync your wardrobe across your iPhone, iPad, and Mac.</li>
+    </ul>
+
+    <p>
+      Whether you’re planning your next travel wardrobe, organizing daily outfits, or creating a wish list of pieces to complete your style, Qamisi is designed
+      to bring simplicity and inspiration to your fashion journey.
+    </p>
+
+    <!-- Privacy Policy -->
+    <h2>Privacy Policy</h2>
+    <p>Qamisi does not collect any data from its users.</p>
+
+    <!-- Contact Us -->
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="return submitForm();">
+      <label for="email_address">Email Address:</label>
+      <input type="email" id="email_address" name="email_address" required />
+
+      <label for="message_content">Message:</label>
+      <textarea id="message_content" name="message_content" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="confirmation-message" id="confirmationMessage">
+      Your message has been received, we will get back to you in 1-2 business days. If you need further assistance, email directly to
+      <a href="mailto:qamisi.co@gmail.com">qamisi.co@gmail.com</a>.
+    </div>
+
+    <script>
+      function submitForm() {
+        // Prevent actual form submission
+        event.preventDefault();
+
+        // Display confirmation message
+        document.getElementById("contactForm").style.display = "none";
+        document.getElementById("confirmationMessage").style.display = "block";
+
+        return false;
+      }
+    </script>
+  </body>
+</html>
